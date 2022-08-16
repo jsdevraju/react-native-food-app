@@ -77,7 +77,7 @@ const Cart = () => {
           <ListItem name="Subtotal" price={100} />
           <ListItem name="Delivery Fee" price={10} />
           <ListItem name="Order Total" price={110} />
-          <TouchableOpacity className="rounded-lg bg-[#00ccbb] p-4">
+          <TouchableOpacity className="rounded-lg bg-[#00ccbb] p-4" onPress={() => navigation.navigate("Order")}>
             <Text className="text-center text-white text-lg font-bold">
               Place order
             </Text>

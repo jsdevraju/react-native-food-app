@@ -11,6 +11,7 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { XIcon } from "react-native-heroicons/outline";
 import * as Progress from "react-native-progress";
+import MapView, { Marker } from "react-native-maps";
 
 const Delivery = () => {
   const navigation = useNavigation();
@@ -45,10 +46,43 @@ const Delivery = () => {
             </View>
             <Progress.Bar size={30} color="#00ccbb" indeterminate={true} />
             <Text className="mt-3 text-gray-300">
-                Your order is being prepared and will be delivered soon
+              Your order is being prepared and will be delivered soon
             </Text>
           </View>
         </View>
+      </SafeAreaView>
+      <MapView
+        initialRegion={{
+          latitude: 37.78825,
+          longitude: -122.4324,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+        className="flex-1 -mt-10 z-[100]"
+        mapType="mutedStandard"
+      >
+        <Marker
+          coordinate={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+          }}
+          title="Your Location"
+          description="You are here"
+          identifier="Origin"
+          pinColor="#00ccbb"
+        />
+      </MapView>
+      <SafeAreaView className="bg-white flex-row items-center space-x-5 h-28">
+        <Image
+          source={{
+            uri: "https://links.papareact.com/wru",
+          }}
+        />
+        <View className="flex-1">
+          <Text className="text-lg">Razu Islam</Text>
+          <Text className="text-gray-400">Your Rider</Text>
+        </View>
+        <Text className="text-[#00ccbb] text-lg mr-5">Call</Text>
       </SafeAreaView>
     </View>
   );

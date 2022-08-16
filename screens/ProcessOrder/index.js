@@ -1,10 +1,19 @@
-import { View, Text, SafeAreaView, Platform, StatusBar } from "react-native";
-import React from "react";
+import { SafeAreaView, Platform, StatusBar } from "react-native";
+import React, { useEffect } from "react";
 import * as Animatable from "react-native-animatable";
-import * as Progress from 'react-native-progress';
-
+import * as Progress from "react-native-progress";
+import { useNavigation } from "@react-navigation/native";
 
 const ProcessOrder = () => {
+
+    const navigation = useNavigation();
+
+    useEffect(() =>{
+        setTimeout(() => {
+            navigation.navigate("Delivery");
+        }, 3000);
+    }, [])
+
   return (
     <SafeAreaView
       style={{
@@ -27,6 +36,7 @@ const ProcessOrder = () => {
       >
         Waiting for Restaurant to accept your order
       </Animatable.Text>
+      <Progress.Circle size={60} indeterminate={true} color="white" />
     </SafeAreaView>
   );
 };

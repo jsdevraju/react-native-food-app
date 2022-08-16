@@ -5,6 +5,7 @@ import HomeScreen from "./screens/Home";
 import Restaurant from "./screens/Restaurant";
 import Cart from "./screens/Cart";
 import ProcessOrder from "./screens/ProcessOrder";
+import Delivery from "./screens/Delivery";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +25,10 @@ export default function App() {
             }}
           />
           <Stack.Screen name="Order" component={ProcessOrder} options={{
+            presentation: "fullScreenModal",
+            headerShown: false,
+          }} />
+          <Stack.Screen name="Delivery" component={Delivery} options={{
             presentation: "fullScreenModal",
             headerShown: false,
           }} />

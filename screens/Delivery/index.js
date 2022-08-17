@@ -53,18 +53,18 @@ const Delivery = () => {
       </SafeAreaView>
       <MapView
         initialRegion={{
-          latitude: 37.78825,
-          longitude: -122.4324,
+          latitude: 35.72482373148822,
+          longitude: -79.46726066662441,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
-        className="flex-1 -mt-10 z-[100]"
+        className="flex-1 -mt-10 z-0"
         mapType="mutedStandard"
       >
         <Marker
           coordinate={{
-            latitude: 37.78825,
-            longitude: -122.4324,
+            latitude: 35.72482373148822,
+            longitude: -79.46726066662441,
           }}
           title="Your Location"
           description="You are here"
@@ -75,7 +75,7 @@ const Delivery = () => {
       <SafeAreaView className="bg-white flex-row items-center space-x-5 h-28">
         <Image
           source={{
-            uri: "https://links.papareact.com/wru",
+            uri: "https://links.papareact.com/fls",
           }}
         />
         <View className="flex-1">

@@ -6,6 +6,9 @@ import Restaurant from "./screens/Restaurant";
 import Cart from "./screens/Cart";
 import ProcessOrder from "./screens/ProcessOrder";
 import Delivery from "./screens/Delivery";
+import Profile from "./screens/Profile";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,8 +17,17 @@ export default function App() {
     <NavigationContainer>
       <TailwindProvider>
         <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login} options={{
+            headerShown:false
+          }} />
+          <Stack.Screen name="Register" component={Register} options={{
+            headerShown:false
+          }} />
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Restaurant" component={Restaurant} />
+          <Stack.Screen name="Profile" component={Profile} options={{
+            headerShown: false,
+          }} />
           <Stack.Screen
             name="Cart"
             component={Cart}

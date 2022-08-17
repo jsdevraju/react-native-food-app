@@ -51,7 +51,7 @@ const HomeScreen = () => {
             <ChevronDownIcon size={20} color="#00CCBB" />
           </Text>
         </View>
-        <UserIcon size={35} color="#00CCBB" />
+        <UserIcon onPress={() => navigation.navigate("Profile")} size={35} color="#00CCBB" />
       </View>
       {/* Search */}
       <View className="flex-row items-center space-x-2 pb-2 mx-4">

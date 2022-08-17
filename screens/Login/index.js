@@ -20,6 +20,7 @@ const Login = () => {
       }}
       className="pt-5 flex-1 items-center justify-center"
     >
+
       <View className="shadow-md bg-white w-full p-8">
         <Text className="text-1xl font-bold text-center">
           Welcome to join our community
@@ -44,7 +45,7 @@ const Login = () => {
         </AppForm>
         <Text className="mt-4 text-gray-700">
           If you don't have account?
-          <Text className="text-blue-600" onPress={() => navigation.navigate("Register")}>signup</Text>
+          <Text className="text-blue-600" onPress={() => navigation.navigate("VerifyEmail")}>signup</Text>
         </Text>
       </View>
     </SafeAreaView>

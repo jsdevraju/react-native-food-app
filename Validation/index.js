@@ -10,9 +10,8 @@ export const LoginSchema = Yup.object().shape({
     .matches(
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
       "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-    )
+    ),
 });
-
 
 export const RegisterSchema = Yup.object().shape({
   name: Yup.string()
@@ -27,5 +26,11 @@ export const RegisterSchema = Yup.object().shape({
     .matches(
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
       "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-    )
+    ),
+});
+
+export const EmailVerifySchema = Yup.object().shape({
+  code: Yup.string()
+    .min(6, ({ min }) => `Verify code must be at least ${min} characters`)
+    .required("Verify code is required"),
 });

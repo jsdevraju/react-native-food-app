@@ -5,9 +5,45 @@ import { apiEndPoint } from "../redux/store";
 export const login = async (values) => {
   try {
     const { data } = await axios.post(`${apiEndPoint}/auth/login`, values);
-    console.log("data", data);
     return data;
   } catch (error) {
     return error;
   }
 };
+
+export const register = async (values) => {
+  try {
+    const { data } = await axios.post(`${apiEndPoint}/auth/register`, values);
+    return data;
+  } catch (error) {
+    return error;
+  }
+};
+
+export const verifyEmail = async (token, values) => {
+  try {
+    const { data } = await axios.post(`${apiEndPoint}/auth/verify-email`, values, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      }
+    });
+    return data;
+  } catch (error) {
+    return error;
+  }
+}
+
+export const logout = async (token, values) => {
+  try {
+    const { data } = await axios.get(`${apiEndPoint}/auth/logout`,{
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      }
+    });
+    return data;
+  } catch (error) {
+    return error;
+  }
+}

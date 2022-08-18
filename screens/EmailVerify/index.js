@@ -1,6 +1,4 @@
-import { View, Text, SafeAreaView, Platform } from "react-native";
-import React from "react";
-import { StatusBar } from "expo-status-bar";
+import { View, Text, SafeAreaView, Platform, StatusBar } from "react-native";
 import AppForm from "../../components/Form/AppForm";
 import AppFormFeilds from "../../components/Form/AppFormFeilds";
 import AppSubmitButton from "../../components/Form/AppSubmitButton";

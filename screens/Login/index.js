@@ -4,14 +4,24 @@ import AppForm from "../../components/Form/AppForm";
 import AppFormFeilds from "../../components/Form/AppFormFeilds";
 import AppSubmitButton from "../../components/Form/AppSubmitButton";
 import { LoginSchema } from "../../Validation";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { login } from "../../utils";
+
 
 const Login = () => {
 
   const navigation = useNavigation();
 
-  const loginUser = (values) => {
-    console.log(values);
+  const loginUser = async (values) => {
+    try {
+      const res = await login(values);
+      console.log("res", res)
+      // await AsyncStorage.setItem('user', JSON.stringify(values));
+    } catch (error) {
+      console.log("erro", error)
+    }
   }
+
 
   return (
     <SafeAreaView
@@ -26,7 +36,7 @@ const Login = () => {
           Welcome to join our community
         </Text>
         <AppForm
-          initialValues={{ name: "", email: "", password: "" }}
+          initialValues={{email: "", password: "" }}
           validationSchema={LoginSchema}
           onSubmit={(values) => loginUser(values)}
         >

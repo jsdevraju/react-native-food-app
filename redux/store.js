@@ -8,7 +8,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 //Create Our Store
 
-export const apiEndPoint = `http://localhost:5000/api/v1`;
+export const apiEndPoint = `https://food-app-server-js.herokuapp.com/api/v1`;
 
 const store = configureStore({
   reducer: {

@@ -4,12 +4,18 @@ import AppForm from "../../components/Form/AppForm";
 import AppFormFeilds from "../../components/Form/AppFormFeilds";
 import AppSubmitButton from "../../components/Form/AppSubmitButton";
 import { RegisterSchema } from "../../Validation";
+import { register } from '../../utils'
 
 const Register = () => {
   const navigation = useNavigation();
 
-  const signUpUser = (values) => {
-    console.log(values);
+  const signUpUser = async (values) => {
+      try {
+          const res = await register(values);
+          console.log(res)
+      } catch (error) {
+        
+      }
   };
 
   return (

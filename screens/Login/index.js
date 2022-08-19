@@ -53,7 +53,7 @@ const Login = () => {
           If you don't have account?
           <Text
             className="text-blue-600"
-            onPress={() => navigation.navigate("VerifyEmail")}
+            onPress={() => navigation.navigate("Register")}
           >
             signup
           </Text>

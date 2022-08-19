@@ -79,14 +79,14 @@ const HomeScreen = () => {
         />
         {/* Tasty Discounts */}
         <FeaturedRow
-          title="Featured"
+          title="Near You"
           id="2"
           description="Paid placements form our partners"
           featuredCategory="featured"
         />
         {/* Offer Near you */}
         <FeaturedRow
-          title="Featured"
+          title="Discounts"
           id="3"
           description="Paid placements form our partners"
           featuredCategory="featured"

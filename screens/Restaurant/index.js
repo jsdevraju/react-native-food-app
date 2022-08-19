@@ -31,7 +31,7 @@ const Restaurant = () => {
         <View className="relative">
           <Image
             source={{
-              uri: "https://links.papareact.com/gn7",
+              uri: "https://i.vimeocdn.com/video/797242259-f4d604a2ad941fcfabfae095cf6d90c244322340c37ab3cff20c33642b9e97ec-d_640x360.jpg",
             }}
             className="w-full h-56 bg-gray-300 p-4"
           />
@@ -45,14 +45,14 @@ const Restaurant = () => {
         {/* Description Details */}
         <View className="bg-white">
           <View className="px-4 pt-4">
-            <Text className="text-3xl font-bold">Test Titlw</Text>
+            <Text className="text-3xl font-bold">Vanilla Ice Cream</Text>
             {/* Header Description */}
             <View className="flex-row space-x-2 my-1">
               {/* Start Icon */}
               <View className="flex-row items-center space-x-1">
                 <StarIcon color="green" opacity={0.5} size={22} />
                 <Text className="text-xs text-gray-500">
-                  <Text className="text-green-500">4.5</Text> Japins
+                  <Text className="text-green-500">4.5</Text> Ice Cream
                 </Text>
               </View>
               {/* Nearby By Address */}
@@ -85,24 +85,24 @@ const Restaurant = () => {
           {/* Dishes */}
           <DishRow
             id="12"
-            name="awesome"
+            name="Vanilla Ice Cream"
             description="lorem imsup doller set amet"
             price={10}
-            images="https://links.papareact.com/gn7"
+            images="https://i.vimeocdn.com/video/529929036-14d354dda7c4f5dc01637826ef0c2579a0be3c29dd8c704ad6ca2883ff88d84b-d_640x360.jpg"
           />
           <DishRow
             id="12"
-            name="awesome"
+            name="Storybook Ice Cream"
             description="lorem imsup doller set amet"
             price={10}
-            images="https://links.papareact.com/gn7"
+            images="https://i.vimeocdn.com/video/652646080-9cec46c7974c67a2c913b32395de344bd7f678bb08000aaf3716b08e84957402-d_640x360.jpg"
           />
           <DishRow
             id="12"
-            name="awesome"
+            name="New Vegetable"
             description="lorem imsup doller set amet"
             price={10}
-            images="https://links.papareact.com/gn7"
+            images="https://i.vimeocdn.com/video/540521405-91d23f47ce423452e826a93d44dce06c7ab4ee49d828cb2f6e616381f87252f0-d_640x360.jpg"
           />
         </View>
       </ScrollView>

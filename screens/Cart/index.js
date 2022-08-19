@@ -60,7 +60,7 @@ const Cart = () => {
           {/* Object.emtries(GroupItemsCart).map((key, item)) => () */}
           {/* Need Map Throw  */}
           <View className="flex-row items-center space-x-3 bg-white py-2 px-5">
-            <Text className="text-[#00ccbb]">3x</Text>
+            <Text className="text-[#00ccbb]">2x</Text>
             <Image
               source={{ uri: "https://links.papareact.com/wru" }}
               className="h-12 w-12 rounded-full"
